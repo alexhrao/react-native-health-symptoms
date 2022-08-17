@@ -1,6 +1,6 @@
 {
   "name": "react-native-health-symptoms",
-  "version": "1.14.3",
+  "version": "1.15.0",
   "description": "A React Native package to interact with Apple HealthKit, including symptoms",
   "main": "index.js",
   "repository": {
