@@ -424,6 +424,11 @@ declare module 'react-native-health' {
       callback: (err: string, results: Array<HealthActivitySummary>) => void,
     ): void
 
+    saveHeadache(
+      options: HealthCategoryOptions,
+      callback: (err: string, results: boolean) => void,
+    ): void
+
     Constants: Constants
   }
 
@@ -529,6 +534,13 @@ declare module 'react-native-health' {
     startDate?: string
     endDate?: string
     metadata?: RecordMetadata
+  }
+
+  export interface HealthSeverityCategoryOptions extends HealthUnitOptions {
+    value: 'Not Present'|'Mild'|'Moderate'|'Severe';
+    startDate?: string;
+    endDate?: string;
+    metadata?: Record;
   }
 
   export interface HealthActivityOptions
@@ -693,6 +705,7 @@ declare module 'react-native-health' {
     FatTotal = 'FatTotal',
     Fiber = 'Fiber',
     Folate = 'Folate',
+    Headache = 'Headache',
     HeadphoneAudioExposure = 'HeadphoneAudioExposure',
     ImmunizationRecord = 'ImmunizationRecord',
     Iodine = 'Iodine',

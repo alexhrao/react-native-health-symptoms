@@ -91,6 +91,37 @@
     }];
 }
 
+- (void) symptom_saveHeadache:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
+{
+    NSString *severity = [RCTAppleHealthKit stringFromOptions:input key:@"value" withDefault:nil];
+    NSDate *sampleDate = [RCTAppleHealthKit dateFromOptions:input key:@"startDate" withDefault:[NSDate date]];
+
+    HKCategoryType *categoryType =
+        [HKObjectType categoryTypeForIdentifier:HKCategoryTypeIdentifierHeadache];
+    HKCategoryValueSeverity sev = HKCategoryValueSeverityNotPresent;
+    if ([severity isEqualToString:@"Mild"]) {
+        sev = HKCategoryValueSeverityMild;
+    } else if ([severity isEqualToString:@"Moderate"]) {
+        sev = HKCategoryValueSeverityModerate;
+    } else if ([severity isEqualToString:@"Severe"]) {
+        sev = HKCategoryValueSeveritySevere;
+    } else if ([severity isEqualToString:@"Not Present"]) {
+        sev = HKCategoryValueSeverityNotPresent;
+    } else {
+        callback(@[[NSNull null], @false]);
+        return;
+    }
+    HKCategorySample *headacheSample = [HKCategorySample categorySampleWithType:categoryType value:sev startDate:sampleDate endDate:sampleDate ];
+
+    [self.healthStore saveObject:headacheSample withCompletion:^(BOOL success, NSError *error) {
+        if (!success) {
+            callback(@[RCTJSErrorFromNSError(error)]);
+            return;
+        }
+        callback(@[[NSNull null], @true]);
+    }];
+}
+
 
 - (void)body_getLatestBodyMassIndex:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
 {

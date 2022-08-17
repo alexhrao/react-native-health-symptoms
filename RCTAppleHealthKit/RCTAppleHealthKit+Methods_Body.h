@@ -14,6 +14,8 @@
 - (void)body_getWeightSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 - (void)body_saveWeight:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 
+- (void)symptom_saveHeadache:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
+
 - (void)body_getLatestBodyMassIndex:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 - (void)body_getBodyMassIndexSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 - (void)body_saveBodyMassIndex:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;

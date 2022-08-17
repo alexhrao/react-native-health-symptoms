@@ -358,6 +358,13 @@
         return [HKObjectType categoryTypeForIdentifier:HKCategoryTypeIdentifierSleepAnalysis];
     }
 
+    // Symptoms
+    if (@available(iOS 13.6, *)) {
+        if ([@"Headache" isEqualToString:key]) {
+            return [HKObjectType categoryTypeForIdentifier:HKCagetegoryTypeIdentifierHeadache];
+        }
+    }
+
     // Mindfulness
     if ([@"MindfulSession" isEqualToString:key]) {
         return [HKObjectType categoryTypeForIdentifier:HKCategoryTypeIdentifierMindfulSession];

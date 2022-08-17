@@ -38,6 +38,7 @@ export const Permissions = {
   FatTotal: 'FatTotal',
   Fiber: 'Fiber',
   Folate: 'Folate',
+  Headache: 'Headache',
   HeadphoneAudioExposure: 'HeadphoneAudioExposure',
   ImmunizationRecord: 'ImmunizationRecord',
   Iodine: 'Iodine',
