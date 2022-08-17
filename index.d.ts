@@ -425,7 +425,7 @@ declare module 'react-native-health-symptoms' {
     ): void
 
     saveHeadache(
-      options: HealthCategoryOptions,
+      options: HealthSeverityCategoryOptions,
       callback: (err: string, results: boolean) => void,
     ): void
 
