@@ -3,7 +3,7 @@
  *
  * @type {Object}
  */
-export const Permissions = {
+ export const Permissions = {
   ActiveEnergyBurned: 'ActiveEnergyBurned',
   ActivitySummary: "ActivitySummary",
   AllergyRecord: 'AllergyRecord',
@@ -30,6 +30,7 @@ export const Permissions = {
   ConditionRecord: 'ConditionRecord',
   Copper: 'Copper',
   CoverageRecord: 'CoverageRecord',
+  Dizziness: 'Dizziness',
   EnergyConsumed: 'EnergyConsumed',
   EnvironmentalAudioExposure: 'EnvironmentalAudioExposure',
   FatMonounsaturated: 'FatMonounsaturated',
@@ -47,7 +48,9 @@ export const Permissions = {
   Magnesium: 'Magnesium',
   Manganese: 'Manganese',
   MedicationRecord: 'MedicationRecord',
+  MemoryLapse: 'MemoryLapse',
   Molybdenum: 'Molybdenum',
+  Nausea: 'Nausea',
   Niacin: 'Niacin',
   OxygenSaturation: 'OxygenSaturation',
   PantothenicAcid: 'PantothenicAcid',

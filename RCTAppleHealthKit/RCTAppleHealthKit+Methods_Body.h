@@ -15,6 +15,9 @@
 - (void)body_saveWeight:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 
 - (void)symptom_saveHeadache:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
+- (void)symptom_saveNausea:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
+- (void)symptom_saveMemoryLapse:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
+- (void)symptom_saveDizziness:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 
 - (void)body_getLatestBodyMassIndex:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 - (void)body_getBodyMassIndexSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;

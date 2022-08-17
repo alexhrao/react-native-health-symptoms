@@ -111,6 +111,24 @@ RCT_EXPORT_METHOD(saveHeadache:(NSDictionary *)input callback:(RCTResponseSender
     [self symptom_saveHeadache:input callback:callback];
 }
 
+RCT_EXPORT_METHOD(saveMemoryLapse:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
+{
+    [self _initializeHealthStore];
+    [self symptom_saveMemoryLapse:input callback:callback];
+}
+
+RCT_EXPORT_METHOD(saveNausea:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
+{
+    [self _initializeHealthStore];
+    [self symptom_saveNausea:input callback:callback];
+}
+
+RCT_EXPORT_METHOD(saveDizziness:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
+{
+    [self _initializeHealthStore];
+    [self symptom_saveDizziness:input callback:callback];
+}
+
 RCT_EXPORT_METHOD(getLatestHeight:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
 {
     [self _initializeHealthStore];

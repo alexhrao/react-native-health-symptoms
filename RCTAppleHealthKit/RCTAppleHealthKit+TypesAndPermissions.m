@@ -362,6 +362,15 @@
     if (@available(iOS 13.6, *)) {
         if ([@"Headache" isEqualToString:key]) {
             return [HKObjectType categoryTypeForIdentifier:HKCategoryTypeIdentifierHeadache];
+        } else if ([@"Nausea" isEqualToString:key]) {
+            return [HKObjectType categoryTypeForIdentifier:HKCategoryTypeIdentifierNausea];
+        } else if ([@"Dizziness" isEqualToString:key]) {
+            return [HKObjectType categoryTypeForIdentifier:HKCategoryTypeIdentifierDizziness];
+        }
+    }
+    if (@available(iOS 14.0, *)) {
+        if ([@"MemoryLapse" isEqualToString:key]) {
+            return [HKObjectType categoryTypeForIdentifier:HKCategoryTypeIdentifierMemoryLapse];
         }
     }
 

@@ -429,6 +429,21 @@ declare module 'react-native-health-symptoms' {
       callback: (err: string, results: boolean) => void,
     ): void
 
+    saveNausea(
+      options: HealthSeverityCategoryOptions,
+      callback: (err: string, results: boolean) => void,
+    ): void
+
+    saveMemoryLapse(
+      options: HealthSeverityCategoryOptions,
+      callback: (err: string, results: boolean) => void,
+    ): void
+
+    saveDizziness(
+      options: HealthSeverityCategoryOptions,
+      callback: (err: string, results: boolean) => void,
+    ): void
+
     Constants: Constants
   }
 
@@ -697,6 +712,7 @@ declare module 'react-native-health-symptoms' {
     ConditionRecord = 'ConditionRecord',
     Copper = 'Copper',
     CoverageRecord = 'CoverageRecord',
+    Dizziness = 'Dizziness',
     EnergyConsumed = 'EnergyConsumed',
     EnvironmentalAudioExposure = 'EnvironmentalAudioExposure',
     FatMonounsaturated = 'FatMonounsaturated',
@@ -714,7 +730,9 @@ declare module 'react-native-health-symptoms' {
     Magnesium = 'Magnesium',
     Manganese = 'Manganese',
     MedicationRecord = 'MedicationRecord',
+    MemoryLapse = 'MemoryLapse',
     Molybdenum = 'Molybdenum',
+    Nausea = 'Nausea',
     Niacin = 'Niacin',
     OxygenSaturation = 'OxygenSaturation',
     PantothenicAcid = 'PantothenicAcid',
