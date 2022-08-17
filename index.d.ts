@@ -1,6 +1,6 @@
-import { HealthInputOptions } from 'react-native-health'
+import { HealthInputOptions } from 'react-native-health-symptoms'
 
-declare module 'react-native-health' {
+declare module 'react-native-health-symptoms' {
   export interface HealthKitPermissions {
     permissions: {
       read: HealthPermission[]
